@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <input type="button" id="speakBtn" value="Speak">
+<input type="button" id="pauseBtn" value="Pause">
+<input type="button" id="cancelBtn" value="Cancel">
+<p id="text">Text to speak goes here. Hello I want to try something new and validate whatever you need to know</p>
+<script type="text/javascript">
+    function textToSpeech()
+{
+   const speech = new SpeechSynthesisUtterance();
+    let voices = speechSynthesis.getVoices();
+    let convert = document.getElementById("text").innerHTML;
+
+    speech.text = convert;
+   
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+   
+    speech.voice = voices[1];
+   
+    speechSynthesis.speak(speech);
+}
+
+
+function pause()
+{
+    speechSynthesis.pause();
+}
+
+
+function stop()
+{
+    speechSynthesis.cancel();
+}
+
+speakBtn.addEventListener('click', textToSpeech);
+pauseBtn.addEventListener('click', pause);
+cancelBtn.addEventListener('click', stop);
+
+</script>
+</body>
+</html>

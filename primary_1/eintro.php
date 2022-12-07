@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Learning System</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+  	<link href="../font-awesome/all.css" rel="stylesheet">
+  	<script type="text/javascript" src="../js/jquery.min.js"></script>
+  	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="../js/sweetalert.js"></script>
+    <script src="../dist/theater.min.js"></script>
+  	<style type="text/css">
+  		body{
+  			background-image: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url('../img/11.jpg');
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+  			height: 100vh;
+  		}
+  	</style>
+</head>
+<body onload="eintro()">
+
+  <section id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3><span class="fa fa-user"></span> ENGLISH LESSONS</h3>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="sidebar">
+     <div class="container-fluid">
+        <div class="row content ">
+          <div class="col-md-2">
+            <center><img src="../img/bookshelf.png" style="width: 50%;margin-top: 10px;"></center>
+            <br>
+            <ul>
+              <li><a href="index.php"><span class="fa fa-atom"></span> Home</a></li>
+              <li><a href="maths.php"><span class="fa fa-balance-scale-right"></span> Maths</a></li>
+              <li><a href="computer.php"><span class="fa fa-desktop"></span> Computer </a></li>
+              <li><a href="english.php"><span class="fa fa-mail-bulk"></span> English</a></li>
+               <li><a href="../index.php"><span class="fa fa-sign-out-alt"></span> Logout</a></li>
+            </ul>
+          </div>
+          <div class="col-md-10">
+            <div id="main2">
+             <h2 id="text" style="display: none;">Welcome Kid, Let's learn how to form sentences with the 26 alphabet in english. Click on the alphabet to form a word and click the enter key to pronouce the word you form.</h2>
+             <div class="row">
+              <div class="col-md-2" style="background-color: transparent;">
+                <h2 style="color: #000;font-size: 20px;margin-top: 250px;background-color: orange;padding: 10px;border-radius: 10px;font-family: Bold; width: 60%"><a href="english.php" style="color: #000;text-decoration: none;"><span class="fa fa-chevron-circle-left"></span> Back</a></h2>
+              </div>
+               <div class="col-md-8">
+
+                <center><div id="board">
+                  <h6>FORMING A SENTENCE </h6>
+                  <br>
+                  <br>
+                    <h1 align="center" ><span id="first" style="font-family: Mont !important;font-size: 18px !important;line-height: initial !important;"></span></h1>
+                </div></center>
+                
+
+                 <center>
+                  <button class="sete" onclick="eng(this.value)" value="A">A</button>
+                <button class="sete" onclick="eng(this.value)" value="B">B</button>
+                <button class="sete" onclick="eng(this.value)" value="C">C</button>
+                <button class="sete" onclick="eng(this.value)" value="D">D</button>
+            
+                <button class="sete" onclick="eng(this.value)" value="E">E</button>
+                 <button class="sete" onclick="eng(this.value)" value="F">F</button>
+                <button class="sete" onclick="eng(this.value)" value="G">G</button>
+                 <button class="sete" onclick="eng(this.value)" value="H">H</button>
+                 <br>
+                <button class="sete" onclick="eng(this.value)" value="I">I</button>
+                <button class="sete" onclick="eng(this.value)" value="J">J</button>
+                <button class="sete" onclick="eng(this.value)" value="K">K</button>
+                <button class="sete" onclick="eng(this.value)" value="L">L</button>
+                
+                <button class="sete" onclick="eng(this.value)" value="M">M</button>
+                <button class="sete" onclick="eng(this.value)" value="N">N</button>
+                <button class="sete" onclick="eng(this.value)" value="O">O</button>
+                <button class="sete" onclick="eng(this.value)" value="P">P</button>
+
+                <br>
+                <button class="sete" onclick="eng(this.value)" value="Q">Q</button>
+                <button class="sete" onclick="eng(this.value)" value="R">R</button>
+                <button class="sete" onclick="eng(this.value)" value="S">S</button>
+                <button class="sete" onclick="eng(this.value)" value="T">T</button>
+                
+                <button class="sete" onclick="eng(this.value)" value="U">U</button>
+                <button class="sete" onclick="eng(this.value)" value="V">V</button>
+                <button class="sete" onclick="eng(this.value)" value="W">W</button>
+                <button class="sete" onclick="eng(this.value)" value="X">X</button>
+                <br>
+                <button class="sete" onclick="eng(this.value)" value="Y">Y</button>
+                <button class="sete" onclick="eng(this.value)" value="Z">Z</button>
+                <button class="sete" onclick="eng(this.value)" value="comma">,</button>
+                <button class="sete" onclick="eng(this.value)" value="full stop">.</button>
+                <button class="sete" onclick="eng(this.value)" value="question mark">?</button>
+                <button class="setee" onclick="eng(this.value)" value="DELETE">DELETE</button>
+                <button class="setee" onclick="eng(this.value)" value="SPACE">SPACE</button>
+                <br>
+                <button style="width: 29.5%;" class="setee" onclick="eng(this.value)" value="ENTER">ENTER</button>
+                <button style="width: 29.5%;" class="setee" onclick="eng(this.value)" value="CLEAR SCREEN">CLEAR SCREEN</button>
+                
+                </center>
+                  
+
+               </div>
+                <div class="col-md-2" style="background-color: transparent;">
+                  <h2 style="color: #000;font-size: 20px;margin-top: 250px;background-color: orange;padding: 10px;border-radius: 10px;font-family: Bold; width: 60%"><a href="eng_dynamic.php" style="color: #000;text-decoration: none;"><span class="fa fa-chevron-circle-right"></span> Next</a></h2>
+              </div>
+             </div> 
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </section>
+
+
+  <!---<audio src="../voice/intro.m4a" autoplay="true" style="display: none;">!--->
+
+ <script>
+  var theater = theaterJS();
+  theater.
+on('type:start, erase:start', function () {
+  theater.getCurrentActor().$element.classList.add('actor__content--typing');
+}).
+on('type:end, erase:end', function () {
+  theater.getCurrentActor().$element.classList.remove('actor__content--typing');
+});
+
+  theater.
+addActor('example', { speed: 0.9, accuracy: 1.5 }).
+addScene('example:<p id="explain"></p> ', 600);
+</script>
+
+
+<script src="../js/script.js" async defer></script>
+</body>
+</html>
